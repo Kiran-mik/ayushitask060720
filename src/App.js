@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
-import Login from '../src/pages/login'
+// import Login from '../src/pages/login'
 import DashBoard from '../src/pages/dashBoard'
 
 
@@ -33,8 +33,8 @@ class App extends Component {
         <PersistGate loading={null} persistor={persistor}>
           <Router>
             <Switch>
-              <LoginCheckRoute exact path="/" component={Login} />
-              <PrivateRoute exact path="/dashboard" component={DashBoard} />
+              {/* <LoginCheckRoute exact path="/" component={Login} /> */}
+              <Route exact path="/" component={DashBoard} />
 
             </Switch>
           </Router>
